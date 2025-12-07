@@ -1,6 +1,7 @@
 {
   "deepscan.enable": true,
   "ruff.enable": true,
+  "ruff.configurationPreference": "filesystemFirst",
   "python.venvPath": ".venv",
   "python.defaultInterpreterPath": "./.venv/Scripts/python.exe",
   "python.testing.unittestArgs":[
@@ -13,18 +14,22 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
-  "files.exclude": {
-    "**/*.egg-info": true,
-    "**/__pycache__": true,
-    "**/*.pyc": true,
-    "**/.DS_Store": true,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.rulers": [160],
   },
-  "editor.rulers": [160],
   "editor.codeActionsOnSave": {
     "source": "always",
     "source.sort.json": "never",
     "source.organizeImports": "explicit",
     "source.sortAndRemoveImports": "explicit",
+  },
+  "files.exclude": {
+    "**/*.egg-info": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.DS_Store": true,
   },
   "errorLens.onSave": true,
   "errorLens.codeLensEnabled": true,

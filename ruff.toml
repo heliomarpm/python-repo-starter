@@ -1,5 +1,6 @@
 line-length = 160
 indent-width = 2
+output-format = "full"
 
 exclude = [ "*ipynb", ".venv/**", "venv/**", "__pypackages__/**", "build/**", "dist/**", ".git/**", "*_cache/**" ]
 
