@@ -1,6 +1,8 @@
+# 📥 Pull Request
+
 ## 📋 Description
 
-Follow the [contribution guidelines](./blob/main/docs/CONTRIBUTING.md). \
+Follow the [contribution guidelines](./blob/main/.github/CONTRIBUTING.md). \
 Briefly describe what this PR does (e.g., fixes, features, improvements).
 
 ## ✅ Change Type
