@@ -13,7 +13,9 @@ wheels/
 .venv/
 venv/
 
-# Ruff stuff:
+# Cache folders:
+.pytest_cache/
+.mypy_cache/
 .ruff_cache/
 
 # dotenv environment variable files
