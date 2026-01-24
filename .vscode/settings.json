@@ -18,6 +18,7 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.rulers": [160],
+    "editor.tabSize": 2
   },
   "editor.codeActionsOnSave": {
     "source": "always",
