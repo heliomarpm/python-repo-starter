@@ -1,13 +1,13 @@
 # ====================================================================================
 # Build System Configuration
 # ====================================================================================
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
 # [build-system]
-# requires = [ "hatchling" ]
-# build-backend = "hatchling.build"
+# requires = ["setuptools", "wheel"]
+# build-backend = "setuptools.build_meta"
+
+[build-system]
+requires = [ "hatchling" ]
+build-backend = "hatchling.build"
 
 # ====================================================================================
 # Project Metadata (PEP 621)
@@ -16,23 +16,25 @@ build-backend = "setuptools.build_meta"
 name = "project_starter"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "Heliomar P. Marques", email = "heliomarpm@proton.me" }]
 classifiers = [
-  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.11",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
 keywords = ["python", "repo", "starter"]
 dynamic = ["version"]
 dependencies = [
-  "click>=8.3.1",
   "loguru>=0.7.3",
   "python-dotenv",
 ]
 
 [project.optional-dependencies]
+demo = [
+  "click>=8.3.1",
+]
 dev = [
   "ruff", "pyright", "pytest", "pytest-cov",
   "twine", # ferramenta para publicar pacotes no PyPI
@@ -49,16 +51,17 @@ Homepage = "https://navto.me/heliomarpm/"
 "Changelog" = "https://github.com/heliomarpm/python-repo-starter/releases"
 
 
-
 # ====================================================================================
 # Tool Configuration for Setuptools, Ruff, etc.
 # For more information https://setuptools.pypa.io/en/latest/index.html
 # ====================================================================================
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["src/**"]
-exclude = ["tests/**", "**/__pycache__"]
+[tool.hatch.version]
+path = "src/project_starter/__init__.py"
 
+# [tool.setuptools.packages.find]
+# where = ["src"]
+# include = ["src/**"]
+# exclude = ["tests/**", "**/__pycache__"]
 
 # ---- Pytest Configuration ----------------------------------------------------------
 [tool.pytest.ini_options]
